@@ -61,10 +61,9 @@ app.use('/api/posts', postRoutes);
 
 app.get('/', (_req, res) => res.json({ success: true, message: 'Social App API is running', version: '2.0.0' }));
 
-app.all('/:unmatched', (req, _res, next) => {
+app.all('/{*unmatched}', (req, _res, next) => {
   next(new AppError(`Route ${req.originalUrl} not found`, 404));
 });
-
 app.use(errorHandler);
 
 connectDB(config.mongoUri);
