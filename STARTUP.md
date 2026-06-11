@@ -1,5 +1,13 @@
 # how to run
 
+## test credentials
+
+- email: you@gmail.com
+- pass:  john123
+- name: johndoe
+
+run `node seed.js` in the backend folder to create this user if not exists.
+
 ## live urls (deployed on render)
 
 - frontend: https://social-app-frontend-0068.onrender.com
