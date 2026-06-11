@@ -5,8 +5,8 @@ const auth = require('../middleware/auth');
 const validate = require('../middleware/validate');
 const { signupRules, loginRules, updateProfileRules } = require('../validators/auth');
 
-router.post('/signup', validate(signupRules), authController.signup);
-router.post('/login', validate(loginRules), authController.login);
+router.post('/signup',  authController.signup);
+router.post('/login',  authController.login);
 router.post('/refresh', authController.refresh);
 router.post('/logout', auth, authController.logout);
 router.get('/me', auth, authController.getMe);
