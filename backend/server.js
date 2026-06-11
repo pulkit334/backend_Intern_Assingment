@@ -17,8 +17,10 @@ const authRoutes = require('./routes/auth');
 const postRoutes = require('./routes/posts');
 
 const app = express();
-
-app.use(cors({ origin: config.corsOrigin, credentials: true }));
+app.use(cors({
+  origin: 'https://social-app-frontend-0068.onrender.com',
+  credentials: true,
+}));
 app.use(helmet());
 app.use(express.json({ limit: '10mb' }));
 app.use(cookieParser());
