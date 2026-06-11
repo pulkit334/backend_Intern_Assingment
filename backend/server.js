@@ -31,7 +31,9 @@ app.use(cookieParser());
 if (config.nodeEnv !== 'test') {
   app.use(morgan('short', { stream: { write: msg => logger.info(msg.trim()) } }));
 }
-
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 const generalLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
