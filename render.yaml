@@ -20,7 +20,7 @@ services:
       - key: CLOUDINARY_API_SECRET
         sync: false
       - key: CORS_ORIGIN
-        value: https://social-app-frontend.onrender.com
+        value: https://social-app-frontend-0068.onrender.com
 
   - type: web
     name: social-app-frontend
@@ -29,7 +29,7 @@ services:
     staticPublishPath: frontend/build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://social-app-backend.onrender.com/api
+        value: https://social-app-backend-5h4c.onrender.com/api
     routes:
       - type: rewrite
         source: /*

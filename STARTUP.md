@@ -1,6 +1,14 @@
 # how to run
 
-## backend
+## live urls (deployed on render)
+
+- frontend: https://social-app-frontend-0068.onrender.com
+- backend: https://social-app-backend-5h4c.onrender.com
+- login: https://social-app-frontend-0068.onrender.com/login
+
+## local dev
+
+### backend
 
 ```bash
 cd backend
@@ -10,7 +18,7 @@ npm run dev     # nodemon, auto-restarts on changes
 
 runs on http://localhost:5000
 
-## frontend
+### frontend
 
 ```bash
 cd frontend
