@@ -18,7 +18,7 @@ const postRoutes = require('./routes/posts');
 
 const app = express();
 const corsOptions = {
-  origin: 'https://social-app-frontend-0068.onrender.com',
+  origin: true,
   credentials: true,
 };
 
