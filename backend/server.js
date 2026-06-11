@@ -19,7 +19,6 @@ const postRoutes = require('./routes/posts');
 const app = express();
 
 app.use(cors({ origin: config.corsOrigin, credentials: true }));
-app.options('*', cors({ origin: config.corsOrigin, credentials: true }));
 app.use(helmet());
 app.use(express.json({ limit: '10mb' }));
 app.use(cookieParser());
