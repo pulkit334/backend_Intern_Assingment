@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const required = ['MONGO_URI', 'JWT_SECRET'];
 const missing = required.filter(k => !process.env[k]);
