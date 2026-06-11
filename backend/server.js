@@ -17,6 +17,7 @@
   const postRoutes = require('./routes/posts');
 
   const app = express();
+  app.set('trust proxy', 1); /
   const corsOptions = {
     origin: true,
     credentials: true,
